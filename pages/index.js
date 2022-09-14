@@ -12,7 +12,7 @@ const HomePage = ({ datas }) => {
   );
 };
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   let datas = (await axios.get("https://api.npoint.io/7b4ad0821da3fb5052cc"))
     .data;
   return {
