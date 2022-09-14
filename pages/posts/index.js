@@ -6,7 +6,7 @@ const posts = ({ posts }) => {
     <>
       {posts.map((post) => (
         <>
-          <Link href={`/posts/${post.id}`} passHref>
+          <Link href={`/posts/${post.id}`} >
             <div
               className="post"
               style={{

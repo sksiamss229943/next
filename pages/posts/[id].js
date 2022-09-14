@@ -5,8 +5,6 @@ function Post({ post }) {
       <div
         className="post"
         style={{
-          cursor: "pointer",
-          userSelect: "none",
           background: "orange",
           margin: "20px",
           borderRadius: "10px",
