@@ -4,28 +4,36 @@ function Post({ post }) {
   return (
     <>
       <div
-        className="post"
+        className="container"
         style={{
-          background: "orange",
-          margin: "20px",
-          borderRadius: "5px",
-          padding: "10px",
-          color: "white",
+          maxWidth: "50rem",
+          margin: "20px auto",
+          padding: "0 20px"
         }}
       >
-        <h2>{post.title}</h2>
-        <h5>{post.body}</h5>
-      </div>
-      <div className="button">
-        <button
+        <div
+          className="post"
           style={{
-            padding: "0.5rem 1.5rem",
-            margin: "20px",
+            background: "orange",
+            borderRadius: "5px",
+            padding: "10px",
+            color: "white",
+            margin: "20px 0"
           }}
-          onClick={() => Router.back()}
         >
-          Back
-        </button>
+          <h2>{post.title}</h2>
+          <h5>{post.body}</h5>
+        </div>
+        <div className="button">
+          <button
+            style={{
+              padding: "0.5rem 1.5rem",
+            }}
+            onClick={() => Router.back()}
+          >
+            Back
+          </button>
+        </div>
       </div>
     </>
   );
