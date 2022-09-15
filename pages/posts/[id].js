@@ -1,4 +1,5 @@
 import axios from "axios";
+import Router from "next/router";
 function Post({ post }) {
   return (
     <>
@@ -7,13 +8,24 @@ function Post({ post }) {
         style={{
           background: "orange",
           margin: "20px",
-          borderRadius: "10px",
+          borderRadius: "5px",
           padding: "10px",
           color: "white",
         }}
       >
         <h2>{post.title}</h2>
         <h5>{post.body}</h5>
+      </div>
+      <div className="button">
+        <button
+          style={{
+            padding: "0.5rem 1.5rem",
+            margin: "20px",
+          }}
+          onClick={() => Router.back()}
+        >
+          Back
+        </button>
       </div>
     </>
   );
