@@ -6,6 +6,7 @@ function capitalizeFirstLetter(string) {
 }
 
 const posts = ({ posts }) => {
+  let all_posts = posts;
   return (
     <>
       <div className="container" style={{ padding: "0 20px" }}>
@@ -18,7 +19,7 @@ const posts = ({ posts }) => {
         >
           Siam Blogs
         </h1>
-        {posts.map((post) => (
+        {all_posts.map((post) => (
           <>
             <Link href={`/posts/${post.id}`}>
               <div
