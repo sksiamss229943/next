@@ -1,5 +1,8 @@
 import axios from "axios";
 import Router from "next/router";
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
 function Post({ post }) {
   return (
     <>
@@ -8,7 +11,7 @@ function Post({ post }) {
         style={{
           maxWidth: "50rem",
           margin: "20px auto",
-          padding: "0 20px"
+          padding: "0 20px",
         }}
       >
         <div
@@ -18,11 +21,11 @@ function Post({ post }) {
             borderRadius: "5px",
             padding: "10px",
             color: "white",
-            margin: "20px 0"
+            margin: "20px 0",
           }}
         >
-          <h2>{post.title}</h2>
-          <h5>{post.body}</h5>
+          <h2>{capitalizeFirstLetter(post.title)}</h2>
+          <h5>{capitalizeFirstLetter(post.body)}</h5>
         </div>
         <div className="button">
           <button

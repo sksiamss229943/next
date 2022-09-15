@@ -1,10 +1,14 @@
 import axios from "axios";
 import Link from "next/link";
 
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
 const posts = ({ posts }) => {
   return (
     <>
-      <div className="container" style={{padding: "0 20px"}}>
+      <div className="container" style={{ padding: "0 20px" }}>
         <h1
           style={{
             textAlign: "center",
@@ -30,7 +34,7 @@ const posts = ({ posts }) => {
                   maxWidth: "50rem",
                 }}
               >
-                <h2>{post.title}</h2>
+                <h2>{capitalizeFirstLetter(post.title)}</h2>
               </div>
             </Link>
           </>
